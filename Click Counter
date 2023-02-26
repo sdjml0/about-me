@@ -1,0 +1,111 @@
+<html> 
+<head>
+<style>
+  button{
+    width:100px;
+    height:50px;
+    border-radius: 200px;
+    color:white;
+    background-color:#ebab34;
+    padding:10px;
+    margin-left:14%;
+    margin-bottom:10%;
+  }
+  #xxx{
+    padding-top:500px;
+    margin:0px;
+    padding:0px;
+  }
+  body{
+    background-color:grey;
+  }
+  h2{
+    color:red;
+  }
+  a{
+    font-size:120px;
+  }
+  #container{
+    border:5px solid black;
+    padding:10px;
+    border-radius:20px;
+  }
+  #content{
+    display:flex;
+    align-content:inline;
+  }
+  header{
+    background-color:#ebab34;
+    display:flex;
+    justify-content:center;
+    border:0px solid white;
+    border-radius:20px;
+  }
+</style>
+</head>
+<body>
+
+<script>
+
+ var clicks = 0; 
+ function onClick() 
+ {
+	 clicks += 1; 
+	 document.getElementById("clicks").innerHTML = clicks; 
+ };
+ function clr()
+ {
+  clicks = 0
+  document.getElementById("clicks").innerHTML= clicks;
+ };
+
+</script> 
+<header>
+<h1>THE CLICK COUNTER </h1>
+</header>
+<div id="container">
+<div align="center">
+<div id="para">
+<h3>It Will Count Your Response.</h3>
+</p>
+<h2>Clicks: </h2><a id="clicks">0</a>
+</div>
+<div id="content">
+
+<button type="button" onClick="onClick()">
+COUNT
+</button><br><br>
+<button type="button" onClick="clr()"> RESET </button>
+
+</div>
+<hr>
+</div>
+
+<p><button id="xxx" type="button" onClick="change()">click here to change bg</button></p>
+</div>
+<h4 align=center style="color:#58c8ed">Thank you for using ❤</h4>
+<script type="text/JavaScript"> 
+var i=1;
+function change(){
+  
+  i+=1;
+  if(i%2==0){
+  document.body.style.backgroundColor="#243447";
+  document.getElementById("xxx").innerHTML="Dark";
+ document.getElementById("para").style.color="white";
+ document.getElementById("xxx").style.backgroundColor="#243447";
+ document.getElementById("xxx").style.color="white";
+ document.getElementById("container").style.borderColor="white";
+ }else
+ if(i%2==1){
+ document.body.style.backgroundColor="white";
+ document.getElementById("xxx").innerHTML="White";
+ document.getElementById("para").style.color="#243447";
+ document.getElementById("xxx").style.backgroundColor="white";
+ document.getElementById("xxx").style.color="black";
+ document.getElementById("container").style.borderColor="#243447";
+ } 
+ }
+</script>
+</body>
+</html>
